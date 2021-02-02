@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hello</title>
+<title>Create Account</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -110,21 +110,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<form>
 				<div> 	
 				<span>First Name</span>
-				<input type="text"> 
+				<input type="text" class="" id="1st"> 
 			</div>
 			<div> 	
 				<span>Last Name</span>
-				<input type="text"> 
+				<input type="text" class="" id="last"> 
 			</div>
 			<div> 	
 				<span>Email</span>
-				<input type="text"> 
+				<input type="text" class="" id="email"> 
 			</div>
 			<div> 
 				<span >Password</span>
-				<input type="password">
+				<input type="password" class="" id="password"><span id="warning"></span>
 			</div>				
-				<input type="submit" value="Submit"> 
+				<input type="button" value="Create" onclick="register()"> 
 			</form>
 		</div>		
 	</div>
@@ -198,5 +198,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="clearfix"> </div>
 	</div>
+
+
+	<script src="register.js"></script>
 </body>
 </html>
