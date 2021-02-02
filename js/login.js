@@ -21,7 +21,7 @@ function login(){
     var storage= JSON.parse(localStorage.getItem("USERS"));
     var server = storage.find((x) =>x.email==email.value && x.password==password.value)
     if(server!=undefined){
-        window.location.href='register.html'
+        window.location.href='product.js'
     }
     else{
         alert('verify your email or your password')
