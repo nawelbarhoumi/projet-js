@@ -373,7 +373,7 @@ select.in-drop {
 .banner {
 	background: url(../images/rtx-3090.jpg) no-repeat center;
 	width: 100%;
-	min-height: 750px;
+	min-height: 1000px;
 	display: block;
 	padding: 12em 0 0;
 	  background-size: cover;
