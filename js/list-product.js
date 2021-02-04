@@ -22,5 +22,5 @@ function storageonload(){
 });
 
 
-document.getElementById('products').innerHTML = rows
+document.getElementById('products').innerHTML = produits
 }
