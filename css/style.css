@@ -371,9 +371,9 @@ select.in-drop {
 }
 /*----*/
 .banner {
-	background: url(../images/banner.jpg) no-repeat center;
+	background: url(../images/rtx-3090.jpg) no-repeat center;
 	width: 100%;
-	min-height: 600px;
+	min-height: 750px;
 	display: block;
 	padding: 12em 0 0;
 	  background-size: cover;
