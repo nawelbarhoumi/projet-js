@@ -1,6 +1,6 @@
 function add(){
-    let name = document.getElementById('firstphoto');
-    let price = document.getElementById('firstprice');
+    let name = document.getElementById('');
+    let price = document.getElementById('');
     var storage = JSON.parse(localStorage.getItem('photos')) || [];
     storage.push(
         {
