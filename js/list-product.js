@@ -2,7 +2,7 @@ function storageonload(){
  
     var storage=JSON.parse(localStorage.getItem('products')) || []
     var produits=''
-    storage.forEach((x) =>  {   
+    storage.forEach((x, i) =>  {   
        produits+= `
         <div class="col-md-4 grid-product-in">	
         <div class=" product-grid">	
@@ -15,11 +15,17 @@ function storageonload(){
             </div>
             <a href="edit-product.html">Update</a>
             
-          </button>
-            <b class="plus-on"><a><i class="fas fa-edit" style="color: black !important"></i></a></b>
-        </div>	
-        </div>
-    `
+           
+          
+        
+    
+               <button onclick="deleteProduct(${i})"><i class="fas fa-trash-alt"></i>Delete</button>
+           </div>
+           <b class="plus-on">+</b>
+       </div>	
+       </div>
+`
+
 });
 
 
