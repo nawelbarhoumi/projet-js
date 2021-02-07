@@ -23,7 +23,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--fonts-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <!--//fonts-->
-
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<!-- font awesome link-->
 </head>
 <body onload="storageonload()">
 	
@@ -33,7 +34,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <div class="header">
 	<div class="logo">
-		<a href="index.html"><img src="images/logo.png" alt="" ></a>
+		<a href="index.html"><img src="images/nextgenit.png" width="80%" height="auto" style="padding-top: 20px;" alt="" ></a>
 	</div>
 	<div  class="header-top">
 		<div class="header-grid">
@@ -210,6 +211,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="clearfix"> </div>
 	</div>
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			
+			<div class="mb-3">
+				  <label for="exampleFormControlInput1" class="form-label">Name</label>
+				  <input type="text" id="name" class="form-control"  placeholder="Name" >
+			  </div>
+			  <div class="mb-3">
+				  <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+				  <textarea class="form-control" id="description" rows="3" ></textarea>
+			  </div>
+			  <div>
+				<input type="hidden" value="" id="index">
+			  </div>
+			</div>
+	  
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"  >Close</button>
+			  <button type="button" class="btn btn-primary" onclick="SaveChanges()" data-bs-dismiss="modal">Save changes</button>
+			</div>
+		  </div>
+		 </div>
+	  </div>
 	<script src="js/product.js"></script>
 	<script src="js/list-product.js"></script>
 	<script src="js/delete-product.js"></script>
