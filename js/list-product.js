@@ -11,7 +11,7 @@ function storageonload(){
                 <h6><a href="single.html">
                   ${x.name}
                 <label>${x.price}</label>
-               <a href="single.html" class="store">FIND A STORE</a>
+               
             </div>
             <a href="edit-product.html">Update</a>
             
