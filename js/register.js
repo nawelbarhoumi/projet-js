@@ -48,5 +48,6 @@ function register(){
             password:password.value
         }
     )
+    window.location.href='account.html'
         localStorage.setItem('USERS',JSON.stringify(storage))
 }

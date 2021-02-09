@@ -21,7 +21,7 @@ function storageonload(){
                
             </div>
             
-            <a href="edit-product.html" onclick="hello(${index})">Update</a>
+            <a class="btn btn-secondary" href="edit-product.html" onclick="hello(${index})">Update</a>
             <button onclick="deleteProduct(${index})"><i class="fas fa-trash-alt"></i>Delete</button>
            </div>
            

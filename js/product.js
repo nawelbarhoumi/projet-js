@@ -23,6 +23,7 @@ async function add(){
             price: price.value,
             image: base64
         })
+        window.location.href='product.html'
     localStorage.setItem('products', JSON.stringify(storage));
 
 }
