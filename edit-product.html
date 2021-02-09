@@ -19,7 +19,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--//fonts-->
 
 </head>
-<body> 
+<body onload="showData()"> 
 <!--header-->
 	<div class="line">
 	
@@ -126,9 +126,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <label for="picture" >picture</label>
                 <!-- accept attribut pour selectionner uniquement fichiers images -->
                 <input type="file" class="file-form-control" id="picture" accept="image/*">
+				<img src="" id="img" alt="">
               </div>
 			  <input type="hidden" value="" id="index">
-            <button type="button" class="btn btn-primary" onclick="modify()">Update</button>
+            <button type="button" class="btn btn-primary" onclick="updated(pos)" >Update</button>
           </form>
       </div>
 	</div>
@@ -203,6 +204,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="clearfix"> </div>
 	</div>
 	<script src="js/product.js"></script>
-    <script src="js/edit-product.js"></script>
+    <script src="js/list-product.js"></script>
 </body>
 </html>
