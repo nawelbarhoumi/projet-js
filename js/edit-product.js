@@ -1,15 +1,35 @@
+const toBase64 = file => new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onload = () => resolve(reader.result);
+  reader.onerror = error => reject(error);
+});
+function showData(i){
+    var storage=JSON.parse(localStorage.getItem('products')) || []
+    document.getElementById("name").value=storage[i].name
+    document.getElementById("price").value=storage[i].price
+    document.getElementById("picture").value=storage[i].picture
+    document.getElementById("index").value= i
+}
 
-  function edit(){
+async function modify(){
     var storage=JSON.parse(localStorage.getItem('products')) || []
     var name=document.getElementById("name").value
     var price=document.getElementById("price").value
-    var picture=document.getElementById("picture").value
-    var updatedProduct={
-      name,
-      price,
-      picture
+    var index=document.getElementById('index').value
+    let picture = document.getElementById('picture')
+    var base64 = "";
+    if(picture.files.length>0){
+        const image = picture.files[0];
+        base64 = await toBase64(image);    
     }
-    storage.splice(updatedProduct,1)
+
+    var updatedProduct={
+      name:name,
+      price:price,
+      image:base64
+    }
+    storage.splice(index,1,updatedProduct)
     // window.location.href='product.html'
     localStorage.setItem('products',JSON.stringify(storage))
-  }
+}
