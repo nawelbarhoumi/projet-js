@@ -21,16 +21,14 @@ function storageonload(){
                
             </div>
             
-            <a href="edit-product.html" onclick="hello(${index})">Update</a>
-            <button onclick="deleteProduct(${index})"><i class="fas fa-trash-alt"></i>Delete</button>
+            <a class="btn btn-success" href="edit-product.html" onclick="hello(${index})">Update</a>
+            <button class="btn btn-danger" onclick="deleteProduct(${index})"><i class="fas fa-trash-alt"></i>Delete</button>
            </div>
            
        </div>	
        </div>
 
 `
-
-
 });
 
 // pos=hello(2);
