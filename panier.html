@@ -24,7 +24,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <!-- font awesome link-->
 </head>
-<body onload="storageonload()">
+<body onload="load()">
 <!--header-->
 <div class="line">
 	
@@ -71,23 +71,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="h_menu4"><!-- start h_menu4 -->
 			<a class="toggleMenu" href="#">Menu</a>
 			<ul class="nav">
-				<li ><a href="#">PCs <i> </i></a>
+				<li ><a href="product.html">Nos PCs <i> </i></a>
 					<ul>
-						<li> <a href="#">Desk Office</a></li>
-						<li> <a href="#">Pc Gamer</a></li>
-						<li> <a href="#">Laptops</a></li>
+						<li> <a href="http://Pc-Bureau.html">Desk Office</a></li>
+						<li> <a href="http://Pc-Gamer.html">Pc Gamer</a></li>
+						<li> <a href="http://Pc-laptop.html">Laptops</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Accessories<i> </i></a>
+				<li><a href="product.html">Accessoires <i> </i></a>
 					<ul>
-						<li><a href="#">Keyborards </a></li>
-						<li><a href="#">Mouses </a></li>
-						<li><a href="#">Microphones </a></li>
-						<li><a href="#">Headsets</a></li>
-						<li><a href="#">Controllers of Consoles and for PC</a></li>
+						<li><a href="#">Clavier </a></li>
+						<li><a href="#">Souris </a></li>
+						<li><a href="#">Microphone </a></li>
+						<li><a href="#">Casque </a></li>
+						<li><a href="#">Manette </a></li>
 					</ul>
 				</li>
-				<li><a href="#">More <i> </i></a>
+				<li><a href="product.html">More <i> </i></a>
 					<ul>
 						<li><a href="contact.html">Contact</a></li>
 						<li><a href="account.html">Account</a></li>
@@ -95,9 +95,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</ul>
 				</li>	
 				<li><a href="product.html">Wishlist <i> </i></a>				
-				<li>
-					<a href="product.html"> Our Products </a>
-				</li>				
 			</ul>				
 			<script type="text/javascript" src="js/nav.js"></script>
 		</div><!-- end h_menu4 -->
@@ -108,12 +105,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!---->
 <div class="product-grids">
-	<a href="add-product.html" class="btn btn-primary">Add product</a>
+	<!-- <a href="add-product.html" class="btn btn-primary">Add product</a> -->
 	<div class="container">	
 	<div class="product-top">
 		<div id="products"> </div>
+		<!-- <div class="col-md-4 grid-product-in">	
+		<div class=" product-grid">	
+			<a href="single.html"><img class="img-responsive " src="images/MSI-GL63-laptop.jpeg" alt=""></a>		
+			<div class="shoe-in">
+				<h6><a href="single.html"> 
+					MSI GL63 Gaming Laptop 15.6" Intel Core i7-8750H, NVIDIA GeForce GTX 1050, 8gb RAM, 256gb SSD + 1TB HDD</a></h6>
+				<label>$1099.89</label>
+				<a href="single.html" class="store">FIND A STORE</a>
+			</div>
+			
+			<b class="plus-on">+</b>
+		</div>	
+		</div> -->
+		<!-- <div class="col-md-4 grid-product-in">	
+		<div class=" product-grid">	
+			<a href="single.html"><img class="img-responsive " src="images/ASUS-ROG.jpg" alt=""></a>
+			<div class="shoe-in">
+				<h6><a href="single.html">
+					ASUS - ROG G531GT0-BI7N6 Notebook PC 15.6" Gaming Laptop - Intel Core i7 - 8GB Memory - NVIDIA GeForce GTX 1650 - 512GB Solid State Drive - Black </a></h6>
+				<label>$1289.99</label>
+				<a href="single.html" class="store">FIND A STORE</a>
+			</div>
+			
+			<b class="plus-on">+</b>
+		</div>
+		</div> -->
 		
-		<input type="hidden" value="" id="index">
+	
 	<div class="clearfix"> </div>
 	</div>
 	</div>
@@ -182,11 +205,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<a href="register.html" class="sign">SIGN UP AND GET MORE</a>
 			<p class="footer-class"> © 2015 Sport All Rights Reserved | Template by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
 		</div>
-		 </div>
-	  </div>
-	<script src="js/product.js"></script>
-	<script src="js/list-product.js"></script>
-	<script src="js/delete-product.js"></script>
+		<div class="clearfix"> </div>
+	</div>
 	<script src="js/panier.js"></script>
 </body>
 </html>

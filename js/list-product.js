@@ -23,6 +23,7 @@ function storageonload(){
             
             <a class="btn btn-success" href="edit-product.html" onclick="hello(${index})">Update</a>
             <button class="btn btn-danger" onclick="deleteProduct(${index})"><i class="fas fa-trash-alt"></i>Delete</button>
+            <button class="btn btn-primary" onclick="addPanier(${index})"><i class="fas fa-trash-alt"></i>Add</button>
            </div>
            
        </div>	
