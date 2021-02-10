@@ -19,7 +19,7 @@ function load(){
                   ${x.name}
                 <label>${x.price}</label>
             </div>
-         
+            <button class="btn btn-danger" onclick="deleteProduct(${i})"><i class="fas fa-trash-alt"></i>Delete</button>
          </div>
   
        </div>	
