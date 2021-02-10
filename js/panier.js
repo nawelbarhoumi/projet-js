@@ -5,7 +5,7 @@ function addPanier(i){
     localStorage.setItem('panier', JSON.stringify(panier))
 }
 
-function storageonload(){
+function load(){
  
     var storage=JSON.parse(localStorage.getItem('products')) || []
     var produits=''
