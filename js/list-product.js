@@ -43,7 +43,7 @@ function showData(pos){
     var storage=JSON.parse(localStorage.getItem('products')) || []
     document.getElementById("name").value=storage[pos].name
     document.getElementById("price").value=storage[pos].price
-    document.getElementById("img").src=storage[pos].picture
+ 
     document.getElementById("index").value= pos
 }
 
