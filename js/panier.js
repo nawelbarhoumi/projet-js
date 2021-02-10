@@ -28,5 +28,5 @@ function load(){
        </div>
 `
 });
-  document.getElementById('panier').innerHTML = produits
+document.getElementById('panier').innerHTML = produits
 }
