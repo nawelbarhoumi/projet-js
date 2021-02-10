@@ -21,17 +21,14 @@ function storageonload(){
                
             </div>
             
-<<<<<<< HEAD
            
           
         
     
                <button class="btn btn-danger" onclick="deleteProduct(${i})"><i class="fas fa-trash-alt"></i>Delete</button>
                <button class="btn btn-primary" onclick="addPanier(${i})"><i class="fas fa-trash-alt"></i>Add</button>
-=======
             <a class="btn btn-success" href="edit-product.html" onclick="hello(${index})">Update</a>
             <button class="btn btn-danger" onclick="deleteProduct(${index})"><i class="fas fa-trash-alt"></i>Delete</button>
->>>>>>> 53f287f0c640f9ea9eae65bf9f8f9d680d24db9c
            </div>
            
        </div>	
