@@ -19,7 +19,8 @@ function storageonload(){
           
         
     
-               <button onclick="deleteProduct(${i})"><i class="fas fa-trash-alt"></i>Delete</button>
+               <button class="btn btn-danger" onclick="deleteProduct(${i})"><i class="fas fa-trash-alt"></i>Delete</button>
+               <button class="btn btn-primary" onclick="addPanier(${i})"><i class="fas fa-trash-alt"></i>Add</button>
            </div>
            <b class="plus-on">+</b>
        </div>	
