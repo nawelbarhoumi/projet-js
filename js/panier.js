@@ -26,10 +26,6 @@ function load(){
        </div>
 `
 });
-<<<<<<< HEAD
-document.getElementById('panier').innerHTML = produits
-=======
 localStorage.setItem('panier',JSON.stringify(storage))
   document.getElementById('products').innerHTML = produits
->>>>>>> 2b6bf97362b70b90e909a847a6ccd71bd7ef7f3e
 }
