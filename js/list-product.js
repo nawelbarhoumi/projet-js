@@ -1,30 +1,33 @@
 var pos;
 
-
-function hello(i) {
-    localStorage.setItem('pos',i)
+function hello(index) {
+    localStorage.setItem('pos',index)
 }
-
+function deleteProduct(index){
+  var product= JSON.parse(localStorage.getItem('products')) || [] ;
+  product.splice(index, 1);
+  
+  localStorage.setItem("products", JSON.stringify(product));
+ storageonload()
+}
 function storageonload(){
- 
     var storage=JSON.parse(localStorage.getItem('products')) || []
     var produits=''
-    storage.forEach((x, index) =>  {   
-       produits+= `
+    storage.forEach((x,index) =>  {   
+        produits+= `
         <div class="col-md-4 grid-product-in">	
         <div class=" product-grid">	
             <a href="single.html"><img class="img-responsive " src="${x.image}" alt=""></a>		
             <div class="shoe-in">
-                <h6><a href="single.html">
-                  ${x.name}
+                <h6>
+                  ${x.name}</h6>
                 <label>${x.price}</label>
                
             </div>
             
             <a class="btn btn-success" href="edit-product.html" onclick="hello(${index})">Update</a>
-            <button class="btn btn-danger" onclick="deleteProduct(${index})"><i class="fas fa-trash-alt"></i>Delete</button>
-            <button class="btn btn-primary" onclick="addPanier(${index})"><i class="fas fa-trash-alt"></i>Add</button>
-           </div>
+            <button class="btn btn-danger" onclick="deleteProduct(${index})">Delete</button>
+          </div>
            
        </div>	
        </div>
@@ -78,4 +81,5 @@ async function updated(pos){
     localStorage.setItem('products',JSON.stringify(storage))
     localStorage.removeItem('pos')
 }
+
 

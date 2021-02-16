@@ -22,21 +22,29 @@ function login(){
     var storage= JSON.parse(localStorage.getItem("USERS"));
     var server = storage.find((x) =>x.email==email.value && x.password==password.value)
     var i=0;
-    console.log(i)
+    
     storage.map((x) => {if(document.getElementById('email')===x.email){
        i++
-        console.log(i)
+        
     }
     });
     if(server!=undefined){
-        if(storage[i].role==='admin'){
+        if(server.role==='admin'){
         window.location.href='index.html'
-        }else  if(storage[i].role==='user'){
-            windo0w.location.href='indexclient.html'
+        }else  if(server.role==='user'){
+            localStorage.setItem('connected',JSON.stringify(server))
+            window.location.href='indexclient.html'
         } 
     }
     else{
         alert('verify your email or your password')
     }
-    
+}
+function logout(){
+    localStorage.removeItem('connected')
+}
+function userconnect(){
+    var user= JSON.parse(localStorage.getItem('connected'))
+    document.getElementById('useraccount').innerHTML=user.firstname+' '+user.lastname
+    document.getElementById('delete').innerHTML=''
 }
