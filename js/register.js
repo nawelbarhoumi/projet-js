@@ -45,7 +45,8 @@ function register(){
             firstname: first.value,
             lastname:last.value,
             email:email.value,
-            password:password.value
+            password:password.value,
+            role:'user'
         }
     )
     window.location.href='account.html'
