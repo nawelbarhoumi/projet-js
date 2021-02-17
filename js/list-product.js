@@ -22,13 +22,12 @@ function storageonload(){
                 <h6>
                   ${x.name}</h6>
                 <label>${x.price}</label>
+                <a class="btn btn-success" href="edit-product.html" onclick="hello(${index})"><ion-icon name="create-outline"></ion-icon></a>
+            <button class="btn btn-danger" onclick="deleteProduct(${index})"><ion-icon name="trash-outline"></ion-icon></button>
                
             </div>
-            
-            <a class="btn btn-success" href="edit-product.html" onclick="hello(${index})">Update</a>
-            <button class="btn btn-danger" onclick="deleteProduct(${index})">Delete</button>
           </div>
-           
+          
        </div>	
        </div>
 

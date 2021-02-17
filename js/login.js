@@ -46,5 +46,4 @@ function logout(){
 function userconnect(){
     var user= JSON.parse(localStorage.getItem('connected'))
     document.getElementById('useraccount').innerHTML=user.firstname+' '+user.lastname
-    document.getElementById('delete').innerHTML=''
 }

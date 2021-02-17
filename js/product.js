@@ -23,25 +23,32 @@ async function add(){
             name: name.value,
             price: price.value,
             image: base64,
-            categorie:categorie
+            categorie:categorie,
+            id : storage.length
         })
        window.location.href='product.html'
     localStorage.setItem('products', JSON.stringify(storage));
 
 }
-function getBookMark(lnk) { 
-    
-    localStorage.setItem('catShow',JSON.stringify(lnk.getAttribute('value')))      
-   
+
+function getBookMark(lnk) {
+    localStorage.setItem('catShow',JSON.stringify(lnk.getAttribute('value')))  
+    console.log(lnk.getAttribute('value'))    
 }
 function showCategories(){
+    var user= JSON.parse(localStorage.getItem('connected'))
+    document.getElementById('useraccount').innerHTML=user.firstname+' '+user.lastname
+    
     let catShow=JSON.parse(localStorage.getItem('catShow'))|| ''
 
-    var Categories = JSON.parse(localStorage.getItem('products')) || [];
-    Categories = Categories.filter(e=> { 
+    var products = JSON.parse(localStorage.getItem('products')) || [];
+    console.log(products);
+
+    Categories = products.filter(e=> { 
         
-        return e.categorie ==catShow
-    })
+        return e.categorie == catShow
+    });
+    console.log(Categories);
     var categories=''
     Categories.forEach((x, i) =>  {   
         categories+= `
@@ -52,14 +59,12 @@ function showCategories(){
                 <h4>${x.name}</h4>
                 <label>${x.price}</label>
             </div>
-            <button class="btn btn-success" onclick="addPanier(${i})">Add</button>
+            <button class="btn btn-success add-cart" onclick="addPanier(${x.id})">Add</button>
          </div>
-  
        </div>	
        </div>
 `
 });
-localStorage.setItem(catShow,JSON.stringify(Categories))
   document.getElementById('products').innerHTML = categories
 }
 function addPanier(i){

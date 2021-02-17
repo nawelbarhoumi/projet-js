@@ -36,7 +36,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div  class="header-top">
 		<div class="header-grid">
 			<ul class="header-in">
-					<li ><a href="account.html">Login    </a> </li>
+				<li><span style="color:white"  id="useraccount" ></span> </li>
+				<li ><a href="account.html" onclick="logout()">Disconnect   </a> </li>
 					<li>	
 						<select class="in-drop">
 						  <option value="Dollars" class="in-of">Dollars</option>
@@ -63,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<!-- //search-scripts -->
 				
 				<div class="online">
-				<a href="panier.html" >SHOP ONLINE</a>
+					<a href="panier.html" > <ion-icon name="cart-outline"></ion-icon><span>0</span></a>
 				</div>
 				<div class="clearfix"> </div>
 		</div>
@@ -73,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<ul class="nav">
 				<li ><a href="#">PCs <i> </i></a>
                     <ul>
-                        <li> <a href="DeskOffice.html" onclick='getBookMark(this)' value='Desk Office'>Desk Office</a></li>
+                        <li> <a href="DeskOffice.html" onclick='getBookMark(this)' value='Desk Office' >Desk Office</a></li>
                         <li> <a href="PcGamer.html" onclick='getBookMark(this)' value='PC Gamer'>Pc Gamer</a></li>
                         <li> <a href="Laptops.html" onclick='getBookMark(this)' value='Laptops'>Laptops</a></li>
                     </ul>
@@ -173,5 +174,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="clearfix"> </div>
 	</div>
 	<script src="js/product.js"></script>
+	<script src="js/cart.js"></script>
+	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+	<script src="js/login.js"></script>
 </body>
 </html>

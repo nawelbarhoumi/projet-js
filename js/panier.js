@@ -1,21 +1,23 @@
-function addPanier(i){
+function addPanier(id){
     var storage=JSON.parse(localStorage.getItem('products')) || [];
     var panier=JSON.parse(localStorage.getItem('panier')) || [];
-    panier.push(storage[i])
+    var product= storage.find(x=> x.id==id)
+    if (product!==undefined){
+    panier.push(storage[id])
+    }
     localStorage.setItem('panier', JSON.stringify(panier))
     load();
 }
 function deleteProduct(i){
   var panier= JSON.parse(localStorage.getItem('panier')) || [] ;
   panier.splice(i, 1);
-  localStorage.setItem("panier", JSON.stringify(panier));
+  localStorage.setItem('panier', JSON.stringify(panier));
   load()
 }
 function load(){
- 
     var storage=JSON.parse(localStorage.getItem("panier")) || []
     var produits=''
-    storage.forEach((x, i) =>  {   
+    storage.forEach((x,i) =>  {   
        produits+= `
         <div class="col-md-4 grid-product-in">	
         <div class=" product-grid">	
@@ -24,13 +26,12 @@ function load(){
                 <h4> ${x.name} </h4>
                 <label>${x.price}</label>
             </div>
-            <button class="btn btn-danger" onclick="deleteProduct(${i})"><i class="fas fa-trash-alt"></i>Delete</button>
+            <button class="btn btn-danger" onclick="deleteProduct(${i})">Delete</button>
          </div>
-  
        </div>	
        </div>
 `
 });
 localStorage.setItem('panier',JSON.stringify(storage))
-  document.getElementById('products').innerHTML = produits
+  document.getElementById('panier').innerHTML = produits
 }

@@ -71,6 +71,9 @@ h1,h2,h3,h4,h5,h6,label,p{
 	color:#fff;
 	  padding: 0 0.5em;
 }
+.online a ion-icon{
+	font-size: 25px;
+}
 .header-bottom-in{
 	float:right;	
 }
